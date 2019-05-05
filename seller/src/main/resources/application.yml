@@ -13,15 +13,15 @@ rpc:
 spring:
   cache:
     type: hazelcast
-  activemq:
-    broker-url: tcp://10.5.16.14:61616
+ # activemq:
+  #  broker-url: tcp://10.5.16.14:61616
     packages:
       trust-all: true
   datasource:
     primary:
-      url: jdbc:mysql://10.5.16.9:3306/seller?user=wch&password=wch123&useUnicode=true&characterEncoding=utf-8
+      url: jdbc:mysql://localhost:3306/seller?user=root&password=123456&useUnicode=true&characterEncoding=utf-8
     backup:
-      url: jdbc:mysql://10.5.16.9:3306/seller-backup?user=wch&password=wch123&useUnicode=true&characterEncoding=utf-8
+      url: jdbc:mysql://localhost:3306/seller-backup?user=root&password=123456&useUnicode=true&characterEncoding=utf-8
   jpa:
     show-sql: true
 swagger:

@@ -3,15 +3,15 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss.SSS
     time-zone: GMT+8
   datasource:
-    url: jdbc:mysql://10.5.16.9:3306/manager?user=wch&password=wch123&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/manager?user=root&password=123456&useUnicode=true&characterEncoding=utf-8
 #    url: jdbc:h2:mem:manager;DB_CLOSE_ON_EXIT=FALSE
   jpa:
     show-sql: true
 #    generate-ddl: true
 #    hibernate:
 #      ddl-auto: create-drop
-  activemq:
-    broker-url: tcp://10.5.16.14:61616
+  #activemq:
+   # broker-url: tcp://10.5.16.14:61616
   jms:
     pub-sub-domain: true
 server:
