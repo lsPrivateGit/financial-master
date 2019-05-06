@@ -17,6 +17,8 @@ public class ProductRpcReq implements ParamInf {
     private BigDecimal maxRewardRate;
     private List<String> statusList;
 
+
+
     @Override
     public String toString() {
         return ReflectionToStringBuilder.toString(this);
@@ -53,6 +55,5 @@ public class ProductRpcReq implements ParamInf {
     public void setStatusList(List<String> statusList) {
         this.statusList = statusList;
     }
-
 
 }

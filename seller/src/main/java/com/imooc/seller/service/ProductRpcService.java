@@ -50,6 +50,7 @@ public class ProductRpcService implements ApplicationListener<ContextRefreshedEv
         return productCache.readAllCache();
     }
 
+
     /**
      * 查询单个产品
      *
@@ -64,7 +65,7 @@ public class ProductRpcService implements ApplicationListener<ContextRefreshedEv
         return product;
     }
 
-    //    @PostConstruct
+    @PostConstruct
     public void init() {
         findAll();
     }

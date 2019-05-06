@@ -10,8 +10,9 @@ import java.util.List;
 
 /**
  * 产品相关的rpc服务
+ * rpc/products 这里不能以 / 开始
  */
-@JsonRpcService
+@JsonRpcService//("rpc/products")
 public interface ProductRpc {
     /**
      * 查询多个产品
@@ -20,6 +21,7 @@ public interface ProductRpc {
      * @return
      */
     List<Product> query(ParamInf req);
+
 
     /**
      * 查询单个产品

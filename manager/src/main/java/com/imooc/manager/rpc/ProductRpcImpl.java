@@ -37,6 +37,8 @@ public class ProductRpcImpl implements ProductRpc {
         return result.getContent();
     }
 
+
+
     @Override
     public Product findOne(String id) {
         LOG.info("查询产品详情,请求:{}", id);
