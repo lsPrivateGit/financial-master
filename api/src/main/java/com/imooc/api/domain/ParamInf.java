@@ -7,6 +7,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2017/9/24 0024.
+ * 参数序列化可以使用JsonDeserialize 的序列化
+ *
  */
 @JsonDeserialize(as = ProductRpcReq.class)
 public interface ParamInf {
