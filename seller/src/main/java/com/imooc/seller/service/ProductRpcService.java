@@ -65,7 +65,7 @@ public class ProductRpcService implements ApplicationListener<ContextRefreshedEv
         return product;
     }
 
-    @PostConstruct
+    //@PostConstruct
     public void init() {
         findAll();
     }

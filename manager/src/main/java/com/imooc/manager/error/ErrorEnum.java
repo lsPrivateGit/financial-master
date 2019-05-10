@@ -6,7 +6,11 @@ package com.imooc.manager.error;
 public enum  ErrorEnum {
     ID_NOT_NULL("F001","编号不可为空",false),
     //...
-    UNKNOWN("999","未知异常",false);
+    UNKNOWN("999","未知异常",false),
+
+    YIELD_RANGE_ERROR("001","收益率范围错误",false),
+    INVESTMENT_STEP_ERROR("002","投资步长需为整数",false);
+
     private String code;
     private String message;
     private boolean canRetry;
@@ -20,6 +24,14 @@ public enum  ErrorEnum {
     public static ErrorEnum getByCode(String code){
         for (ErrorEnum errorEnum : ErrorEnum.values()) {
             if(errorEnum.code.equals(code)){
+                return errorEnum;
+            }
+        }
+        return UNKNOWN;
+    }
+    public static ErrorEnum getByMessage(String message){
+        for (ErrorEnum errorEnum : ErrorEnum.values()) {
+            if(errorEnum.message.equals(message)){
                 return errorEnum;
             }
         }

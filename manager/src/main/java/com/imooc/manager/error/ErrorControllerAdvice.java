@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * 统一错误处理
  */
-//@ControllerAdvice(basePackages = {"com.imooc.manager.controller"})
+@ControllerAdvice(basePackages = {"com.imooc.manager.controller"})
 public class ErrorControllerAdvice {
 
     @ExceptionHandler(Exception.class)
@@ -27,7 +27,7 @@ public class ErrorControllerAdvice {
         attrs.put("code",errorEnum.getCode());
         attrs.put("canRetry",errorEnum.isCanRetry());
         attrs.put("type","advice");
-        Assert.isNull(attrs,"advice");
+       // Assert.isNull(attrs,"advice");
         return new ResponseEntity(attrs, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

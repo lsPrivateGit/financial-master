@@ -2,6 +2,7 @@ package com.imooc.manager.service;
 
 import com.imooc.entity.Product;
 import com.imooc.entity.enums.ProductStatus;
+import com.imooc.manager.error.ErrorEnum;
 import com.imooc.manager.repositories.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -81,12 +82,12 @@ public class ProductService {
      * @param product
      */
     private void checkProduct(Product product) {
-        Assert.notNull(product.getId(), "编号不可为空");
+        Assert.notNull(product.getId(), ErrorEnum.ID_NOT_NULL.getCode());
         //其他非空校验
 
-        Assert.isTrue(BigDecimal.ZERO.compareTo(product.getRewardRate()) < 0 && BigDecimal.valueOf(30).compareTo(product.getRewardRate()) >= 0, "收益率范围错误");
+        Assert.isTrue(BigDecimal.ZERO.compareTo(product.getRewardRate()) < 0 && BigDecimal.valueOf(30).compareTo(product.getRewardRate()) >= 0, ErrorEnum.YIELD_RANGE_ERROR.getCode());
 
-        Assert.isTrue(BigDecimal.valueOf(product.getStepAmount().longValue()).compareTo(product.getStepAmount()) == 0, "投资步长需为整数");
+        Assert.isTrue(BigDecimal.valueOf(product.getStepAmount().longValue()).compareTo(product.getStepAmount()) == 0, ErrorEnum.INVESTMENT_STEP_ERROR.getCode());
 
     }
 

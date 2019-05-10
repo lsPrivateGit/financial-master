@@ -20,10 +20,10 @@ spring:
       trust-all: true
   datasource:
     primary:
-      url: jdbc:mysql://localhost:3306/seller?user=root&useUnicode=true&characterEncoding=utf-8
+      url: jdbc:mysql://localhost:3306/seller?user=root&password=123456&useUnicode=true&characterEncoding=utf-8
       #url: jdbc:mysql://localhost:3306/seller?user=root&useUnicode=true&characterEncoding=utf-8
     backup:
-      url: jdbc:mysql://localhost:3306/seller-backup?user=root&useUnicode=true&characterEncoding=utf-8
+      url: jdbc:mysql://localhost:3306/seller-backup?user=root&password=123456&useUnicode=true&characterEncoding=utf-8
       #url: jdbc:mysql://localhost:3306/seller-backup?user=root&useUnicode=true&characterEncoding=utf-8
   jpa:
     show-sql: true
